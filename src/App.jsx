@@ -1,5 +1,14 @@
 import React from 'react'
 
 export function App() {
-  return <div>Hello Cypress</div>
+  const LazyLoaded = React.lazy(() => import('./LazyLoaded.jsx'))
+
+  return (
+    <div>
+      <div>Hello Cypress</div>
+      <React.Suspense fallback='Loading...'>
+        <LazyLoaded />
+      </React.Suspense>
+    </div>
+  )
 }
