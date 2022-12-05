@@ -1,5 +1,5 @@
 import React from 'react'
-import image from './react.png'
+import image from '../assets/react.png'
 
 export function Image() {
   return (
